@@ -12,6 +12,7 @@ The objetive of this workshop is to summarize the concepts and use cases of Go
 A data structure is the organization of data to reduce the storage space used and to reduce the difficulty while performing different tasks. Data structures are used to handle and work with large amounts of data in various fields, such as database management and internet indexing services.
 
 The classification of Data Structures is show in the following diagram:
+
 ![Types](assets/data_structure/data_structure_lists)
 
 | Topic | Description | Example code
