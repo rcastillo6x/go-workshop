@@ -1,4 +1,4 @@
-# Structure
+# Structure | [Home](../../README.md)
 
 A Go program basically consists of the following parts −
 
@@ -8,3 +8,17 @@ A Go program basically consists of the following parts −
 * Variables
 * Statements and Expressions
 * Comments
+
+```
+package main
+
+import "fmt"
+
+func main() {
+	var msg string = "This is a message"
+	/*
+		This is a comment
+	*/
+	fmt.Println("Var msg is equal to :" + msg)
+}
+```

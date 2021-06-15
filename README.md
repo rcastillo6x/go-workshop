@@ -5,17 +5,15 @@ The objetive of this workshop is to summarize the concepts and use cases of Go
 ## Fundamental
 | Topic | Description | Example code
 | ----------- | ----------- | ----------- |
-| Program structure | Minimum structure of go programs |
+| Program structure | [Minimum structure of go programs](assets/fundamental/structure.md) | [code](assets/../src/fundamental/1-0-structure/main.go)
 
-`package main
+## Data Structures and Algorithms
 
-import "fmt"
+A data structure is the organization of data to reduce the storage space used and to reduce the difficulty while performing different tasks. Data structures are used to handle and work with large amounts of data in various fields, such as database management and internet indexing services.
 
-func main() {
-	var msg string = "This is a message"
-	/*
-		This is a comment
-	*/
-	fmt.Println("Var msg is equal to :" + msg)
-}
-`
+The classification of Data Structures is show in the following diagram:
+![Types](assets/data_structure/data_structure_lists)
+
+| Topic | Description | Example code
+| ----------- | ----------- | ----------- |
+| List | [a secuence of elements](assets/data_structure/list.md) | [code](assets/../src/data_structure/list/main.go)
