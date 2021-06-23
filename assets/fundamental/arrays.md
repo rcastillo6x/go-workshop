@@ -55,6 +55,14 @@ float32 salary = balance[9]
 
 Arrays can have more than one dimension. However, using more than three dimensions without a serious reason can make your program difficult to read and might create bugs.
 
+Go programming language allows multidimensional arrays. Here is the general form of a multidimensional array declaration −
+
+```
+
+var variable_name [SIZE1][SIZE2]...[SIZEN] variable_type
+ 
+```
+
 The following Go code shows how you can create an array with two dimensions (twoD) and another one with three dimensions (threeD)
 
 ```
@@ -63,6 +71,24 @@ twoD := [4][4]int{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12},  {13, 14, 15, 16}
 threeD := [2][2][2]int{{{1, 0}, {-2, 4}}, {{5, -1}, {7, 0}}} 
  
 ```
+
+## Initializing Two-Dimensional Arrays
+
+Multidimensional arrays may be initialized by specifying bracketed values for each row. Following is an array with 3 rows and each row has 4 columns.
+
+```
+a = [3][4]int{  
+   {0, 1, 2, 3} ,   /*  initializers for row indexed by 0 */
+   {4, 5, 6, 7} ,   /*  initializers for row indexed by 1 */
+   {8, 9, 10, 11}   /*  initializers for row indexed by 2 */
+}
+```
+
+## Accessing Two-Dimensional Array elements
+
+An element in two dimensional array is accessed by using the subscripts, i.e., row index and column index of the array. For example −
+
+int val = a[2][3]
 
 Accessing, assigning, or printing a single element from one of the previous two arrays can be done easily. As an example, the first element of the twoD array is twoD[0][0] and its value is 1.
 
@@ -76,3 +102,5 @@ Therefore, accessing all the elements of the threeD array with the help of multi
         } 
     }  
 ```
+
+As you can see, you need as many for loops as the dimensions of the array in order to access all of its elements.
