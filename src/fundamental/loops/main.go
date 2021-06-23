@@ -21,7 +21,7 @@ func main() {
 		fmt.Print(i, " ")
 	}
 
-	// Continue and Break
+	// Continue and Break Do While
 	fmt.Println()
 	fmt.Println("***\n Continue Break \n***  ")
 	fmt.Println()

@@ -8,6 +8,7 @@ The objetive of this workshop is to summarize the concepts and use cases of Go
 | Program structure | [Minimum structure of go programs](assets/fundamental/structure.md) | [code](assets/../src/fundamental/structure/main.go)
 | Working with Basic Go | [Numeric data types](assets/fundamental/numeric_data_type.md) | [code](assets/../src/fundamental/numeric_data_type/main.go)
 | Working with Basic Go | [Loops](assets/fundamental/loops.md) | [code](assets/../src/fundamental/loops/main.go)
+| Working with Basic Go | [Arrays](assets/fundamental/arrays.md) | [code](assets/../src/fundamental/arrays/main.go)
 
 ## Data Structures and Algorithms
 
