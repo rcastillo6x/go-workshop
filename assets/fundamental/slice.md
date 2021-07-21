@@ -63,3 +63,13 @@ s2 := integer[1:3]
 
 ## len() and cap() functions
 A slice is an abstraction over array. It actually uses arrays as an underlying structure. The len() function returns the elements presents in the slice where cap() function returns the capacity of the slice (i.e., how many elements it can be accommodate)
+
+## Byte slices
+
+A byte slice is a slice where its type is byte. You can create a new byte slice named s as follows:
+
+```
+s := make([]byte, 5) 
+```
+
+Go knows that most slices of bytes are used to store strings and so makes it easy to switch between this type and the string type. There is nothing special in the way you can access a byte slice compared to the other types of slices. It is just that byte slices are used in file input and output operations

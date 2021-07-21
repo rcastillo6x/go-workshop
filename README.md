@@ -21,4 +21,4 @@ The classification of Data Structures is show in the following diagram:
 
 | Topic | Description | Example code
 | ----------- | ----------- | ----------- |
-| List | [a secuence of elements](assets/data_structure/list.md) | [code](assets/../src/data_structure/list/main.go)
+| Linear Data Structure | List[a secuence of elements](assets/data_structure/list.md) | [code](assets/../src/data_structure/list/main.go)
