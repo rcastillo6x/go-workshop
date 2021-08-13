@@ -39,6 +39,39 @@ func main() {
 	/* print the sub slice starting from index 2(included) to index 5(excluded) */
 	number3 := numbersInt[2:5]
 	printSlice(number3, "number3")
+
+	a6 := []int{-10, 1, 2, 3, 4, 5}
+	a4 := []int{-1, -2, -3, -4}
+	fmt.Println("a6:", a6)
+	fmt.Println("a4:", a4)
+
+	copy(a6, a4)
+	fmt.Println("a6:", a6)
+	fmt.Println("a4:", a4)
+	fmt.Println()
+
+	// append
+	var numbersInt2 []int
+	printSlice(numbersInt2,"numbersInt2")
+
+	/* append allows nil slice */
+	numbersInt2 = append(numbersInt2, 0)
+	printSlice(numbersInt2,"numbersInt2")
+
+	/* add one element to slice*/
+	numbersInt2 = append(numbersInt2, 1)
+	printSlice(numbersInt2,"numbersInt2")
+
+	/* add more than one element at a time*/
+	numbersInt2 = append(numbersInt2, 2,3,4)
+	printSlice(numbersInt2,"numbersInt2")
+
+	/* create a slice numbers1 with double the capacity of earlier slice*/
+	numbersInt3 := make([]int, len(numbersInt2), (cap(numbersInt2))*2)
+
+	/* copy content of numbers to numbers1 */
+	copy(numbersInt3,numbersInt2)
+	printSlice(numbersInt3,"numbersInt3")
 }
 func printSlice(x []int, name string) {
 	fmt.Printf("slice = %s len=%d cap=%d slice=%v\n", name, len(x), cap(x), x)

@@ -64,6 +64,49 @@ s2 := integer[1:3]
 ## len() and cap() functions
 A slice is an abstraction over array. It actually uses arrays as an underlying structure. The len() function returns the elements presents in the slice where cap() function returns the capacity of the slice (i.e., how many elements it can be accommodate)
 
+## Subslicing
+
+Slice allows lower-bound and upper bound to be specified to get the subslice of it using[lower-bound:upper-bound]. For example −
+
+```
+package main
+
+import "fmt"
+
+func main() {
+   /* create a slice */
+   numbers := []int{0,1,2,3,4,5,6,7,8}   
+   printSlice(numbers)
+   
+   /* print the original slice */
+   fmt.Println("numbers ==", numbers)
+   
+   /* print the sub slice starting from index 1(included) to index 4(excluded)*/
+   fmt.Println("numbers[1:4] ==", numbers[1:4])
+   
+   /* missing lower bound implies 0*/
+   fmt.Println("numbers[:3] ==", numbers[:3])
+   
+   /* missing upper bound implies len(s)*/
+   fmt.Println("numbers[4:] ==", numbers[4:])
+   
+   numbers1 := make([]int,0,5)
+   printSlice(numbers1)
+   
+   /* print the sub slice starting from index 0(included) to index 2(excluded) */
+   number2 := numbers[:2]
+   printSlice(number2)
+   
+   /* print the sub slice starting from index 2(included) to index 5(excluded) */
+   number3 := numbers[2:5]
+   printSlice(number3)
+   
+}
+func printSlice(x []int){
+   fmt.Printf("len = %d cap = %d slice = %v\n", len(x), cap(x),x)
+}
+```
+
 ## Byte slices
 
 A byte slice is a slice where its type is byte. You can create a new byte slice named s as follows:
@@ -73,3 +116,65 @@ s := make([]byte, 5)
 ```
 
 Go knows that most slices of bytes are used to store strings and so makes it easy to switch between this type and the string type. There is nothing special in the way you can access a byte slice compared to the other types of slices. It is just that byte slices are used in file input and output operations
+
+## The copy() function
+
+You can create a slice from the elements of an existing array and you can copy an existing slice to another one using the copy() function. However, as the use of copy()
+
+```
+package main 
+ 
+import ( 
+    "fmt" 
+) 
+ 
+func main() { 
+    a6 := []int{-10, 1, 2, 3, 4, 5} 
+    a4 := []int{-1, -2, -3, -4} 
+    fmt.Println("a6:", a6) 
+    fmt.Println("a4:", a4) 
+ 
+    copy(a6, a4) 
+    fmt.Println("a6:", a6) 
+    fmt.Println("a4:", a4) 
+    fmt.Println() 
+    
+```
+
+So, in the preceding code, we define two slices named a6 and a4, we print them, and then we try to copy a4 to a6. As a6 has more elements than a4, all the elements of a4 will be copied to a6. However, as a4 has only four elements and a6 has six elements, the last two elements of a6 will remain the same.
+
+## append()  
+One can increase the capacity of a slice using the append() function.
+
+```
+package main
+
+import "fmt"
+
+func main() {
+   var numbers []int
+   printSlice(numbers)
+   
+   /* append allows nil slice */
+   numbers = append(numbers, 0)
+   printSlice(numbers)
+   
+   /* add one element to slice*/
+   numbers = append(numbers, 1)
+   printSlice(numbers)
+   
+   /* add more than one element at a time*/
+   numbers = append(numbers, 2,3,4)
+   printSlice(numbers)
+   
+   /* create a slice numbers1 with double the capacity of earlier slice*/
+   numbers1 := make([]int, len(numbers), (cap(numbers))*2)
+   
+   /* copy content of numbers to numbers1 */
+   copy(numbers1,numbers)
+   printSlice(numbers1)   
+}
+func printSlice(x []int){
+   fmt.Printf("len=%d cap=%d slice=%v\n",len(x),cap(x),x)
+}
+```

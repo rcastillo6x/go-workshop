@@ -10,6 +10,7 @@ The objetive of this workshop is to summarize the concepts and use cases of Go
 | Working with Basic Go | [Loops](assets/fundamental/loops.md) | [code](assets/../src/fundamental/loops/main.go)
 | Working with Basic Go | [Arrays](assets/fundamental/arrays.md) | [code](assets/../src/fundamental/arrays/main.go)
 | Working with Basic Go | [Slice](assets/fundamental/slice.md) | [code](assets/../src/fundamental/slice/main.go)
+| Working with Basic Go | [Map](assets/fundamental/map.md) | [code](assets/../src/fundamental/map/main.go)
 
 ## Data Structures and Algorithms
 
